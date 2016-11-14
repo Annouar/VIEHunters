@@ -1,0 +1,53 @@
+extends ../includes/layout
+
+block header
+    nav.navbar.navbar-inverse
+        .container-fluid
+            .navbar-header
+                a.navbar-brand#brand(href='voicebox.html') Dashboard for VIE hunters
+            ul.nav.navbar-nav
+                li
+                    a(href='#') TOUR
+                li
+                    a(href='#') HOW TO PODCAST
+                li
+                    a(href='#') OUR PODCASTS
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='#')
+                        span.glyphicon.glyphicon-question-sign
+                        |  HELP
+                li
+                    a(href='gettingstarted.html')
+                        span.glyphicon.glyphicon-user
+                        |  Sign Up
+                li
+                    a(href='#', data-toggle='modal', data-target='#login-modal') Login
+            #login-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true', style='display: none;')
+                .modal-dialog
+                    .loginmodal-container
+                        h1 Login to Your Account
+                        br
+                        form
+                            input(type='text', name='user', placeholder='Username')
+                            input(type='password', name='pass', placeholder='Password')
+                            input.login.loginmodal-submit(type='submit', name='login', value='Login')
+                        .login-help
+                            a(href='gettingstarted.html') Register
+                            |  -
+                            a(href='#') Forgot Password
+
+block main-content
+    section.content
+        div(ng-view)
+
+
+block footer
+    .navbar.navbar-default.navbar-fixed-bottom
+        .container
+            p.navbar-text.pull-left
+                | © 2016 - Site Build By
+                a(href='http://tinyurl.com/hhaz4wp', target='_blank') @annouar
+            a.navbar-btn.btn-danger.btn.pull-right(href='https://github.com/')
+                span.glyphicon.glyphicon-star
+                |   Checkout sources from GitHub

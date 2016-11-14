@@ -1,0 +1,12 @@
+.container
+    .jumbotron
+        h1 VIE Dashboard
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu laoreet elit. Sed a libero finibus, viverra sapien id, mattis libero. Phasellus ultrices tempus congue. Phasellus ultricies magna mattis, laoreet elit in, ultrices sapien. Proin nulla lectus, suscipit quis mi tincidunt, suscipit tristique tortor. Etiam eu odio vel massa cursus auctor vel porta metus. Sed vel ligula at justo imperdiet bibendum eget a magna. Proin sit amet auctor enim. Nulla non dignissim magna. Phasellus auctor vulputate commodo. Praesent vitae leo sed leo posuere tristique. Nunc molestie, mi et sollicitudin convallis, massa elit viverra tortor, at iaculis enim massa sed ante. Nullam eget elit leo.
+
+    h2.sub-header Checkout last offers !
+    .row.placeholders
+        .col-xs-6.col-sm-3.placeholder(ng-repeat="offer in offers")
+            a(href="{{offer.url}}")
+                img.img-responsive(src='{{offer.url_map}}', width='200', height='200', alt='Generic placeholder thumbnail')
+                h4 {{offer.job_title}}
+                span.text-muted {{offer.published_date}}
